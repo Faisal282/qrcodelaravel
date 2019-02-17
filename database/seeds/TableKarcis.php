@@ -13,13 +13,13 @@ class TableKarcis extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        $x = "FES000";
-        for($i = 0; $i < 250; $i++) {
+        $x = "130000000001";
+        for($i = 1; $i <= 600; $i++) {
             // echo $x++,'<br />';
             DB::table('karcis')->insert([
                 'id_karcis' => $x++,
-                'id_tiket' => 1,
-                'id_penjaga' => "1",
+                'id_tiket' => 3,
+                'id_penjaga' => 1,
                 'status' => 0,
             ]);
         }

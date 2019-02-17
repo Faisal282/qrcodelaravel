@@ -15,4 +15,13 @@ Route::get('/', 'indexController@index');
 
 Route::get('karcis', 'Karcis@index');
 
-Route::get('barcode',  'ProdukController@printBarcode');
+Route::get('scan',  'ProdukController@index')->name('scan');
+Route::put('scan',  'ProdukController@scanFestival');
+
+Route::get('cek', 'ProdukController@cek');
+Route::post('cek', 'ProdukController@cekstatus');
+
+Route::get('festival',  'ProdukController@makePDFfestival');
+Route::get('deluxe',  'ProdukController@makePDFdeluxe');
+Route::get('vip',  'ProdukController@makePDFvip');
+
